@@ -1,6 +1,6 @@
 # Matters arising
 
-This repository contains scripts for rerunning the analysis in: 
+This repository contains scripts for running the analyses in *Insufficient evidence for natural selection associated with the Black Death*, Barton et al. (2023).
 
 **Figure1_plots.md** contians the scripts to generate the density and q-q plots in figure 1. It reads in the p-values generated from the downsample.sh, coverage_100.r permute_samples.sh, and run_permutations.r. 
 
