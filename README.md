@@ -16,5 +16,5 @@ This repository contains scripts for running the analyses in *Insufficient evide
 
 **permute_samples.sh** shuffles the sample labels for the pre- and post-BD samples while retaining the original number of samples used for each target panel.
 
-**run_permutations.sh** runs the original Klunk et al. pipeline but reads in the suffled labels from permute_samples.sh.
+**run_permutations.r** runs the original Klunk et al. pipeline but reads in the suffled labels from permute_samples.sh.
 
