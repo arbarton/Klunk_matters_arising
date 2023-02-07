@@ -4,7 +4,9 @@ This repository contains scripts for running the analyses in *Insufficient evide
 
 **Figure1_plots.md** contians the scripts to generate the density and q-q plots in figure 1. It reads in the p-values generated from the downsample.sh, coverage_100.r permute_samples.sh, and run_permutations.r. 
 
-**Figure2_plots.md** contains the scripts to generate the plost in figure 2. The simulations need for 2a and 2b are included here. The data for figures 2c and 2d are read in from Klunk_afs.r and ML_afs.r.
+**Figure2_plots.md** contains the scripts to generate the plots in figure 2. The simulations need for 2a and 2b are included here. The data for figures 2c and 2d are read in from Klunk_afs.r and ML_afs.r.
+
+**Figure3_plots.md** contains the script to generate the plots in figure 3. This should not require any other scripts to run. 
 
 **Klunk_afs.r** runs the original Klunk et al. pipeline and saves the data for use in Figure2_plots.md.
 
