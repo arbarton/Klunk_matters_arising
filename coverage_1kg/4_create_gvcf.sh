@@ -3,14 +3,14 @@
 #SBATCH -t 0-12:00:00
 #SBATCH --mem-per-cpu=4G
 #SBATCH -c 2
-#SBATCH --array=1-100
+#SBATCH --array=1-206
 
-Y=${SLURM_ARRAY_TASK_ID}
+Y=$1
+X=${SLURM_ARRAY_TASK_ID}
 
 module load gatk
 
-for X in {1..206}
-do
+
 rm ./run_${Y}/merge.list
 rm ./run_${Y}/sample_${X}/sample_${X}.L.g.vcf.gz
 rm ./run_${Y}/sample_${X}/sample_${X}.L.g.vcf.gz.tbi
@@ -31,5 +31,3 @@ rm ./run_${Y}/sample_${X}/sample${X}.frac*.L.g.vcf.gz
 rm ./run_${Y}/sample_${X}/sample${X}.frac*.L.g.vcf.gz.tbi
 rm ./run_${Y}/sample_${X}/sample${X}.*bam.bed
 rm ./run_${Y}/sample_${X}/sample${X}.*bam.bai
-
-done
