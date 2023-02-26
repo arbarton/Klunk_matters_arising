@@ -8,6 +8,7 @@
 Y=${SLURM_ARRAY_TASK_ID}
 module load gatk
 
+#combine by-sample gvcfs and call genotypes
 rm ./run_${Y}/merge.list
 for X in {1..206}
 do
@@ -19,6 +20,8 @@ bcftools reheader -s ./samples_list.txt -o ./run_${Y}/run_${Y}_merged.reheader.g
 rm ./run_${Y}/run_${Y}_merged.geno.vcf.gz
 rm ./run_${Y}/run_${Y}_merged.geno.vcf.gz.tbi
 
+
+#code from original analysis, updates with new sample totals
 
 module load vcftools
 vcftools --gzvcf ./run_${Y}/run_${Y}_merged.reheader.geno.vcf.gz  --mac 1 --max-alleles 2 --remove-indels --minQ 30 --freq --out ./run_${Y}/run_${Y}_merged
