@@ -19,7 +19,7 @@
 #head -37 london_neutral_all_trial_${X} > permute_${X}/keep_london_pre_neutral
 #tail -63 london_neutral_all_trial_${X} > permute_${X}/keep_london_post_neutral
 #rm london_neutral_all_trial_${X}
-done
+#done
 
 ##perform permutations with fixed total of individuals in each target panel
 for X in {1..100}
